@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Github Profil</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.css"
+    />
+  </head>
+  <body>
+    <div class="contenair" id="app">
+      <h1>Github Profils</h1>
+      <github-profils></github-profils>
+    </div>
+
+    <script type="text/x-template" id="github-profils-template">
+
+      <div class="user-list">
+        <github-profils-user-card v-for="user in githubUsers" :key="user.id">
+            <template #user-image>
+                <img :src="user.avatar_url" alt="">
+            </template>
+            <template #user-name>
+                <a class="header" :href="user.html_url">{{user.login.toUpperCase()}}</a>
+            </template>
+
+        </github-profils-user-card>
+      </div>
+    </script>
+
+    <script type="text/x-template" id="github-profils-user-card">
+
+      <div class="ui card">
+          <div class="image">
+            <slot name="user-image"></slot>
+          </div>
+          <div class="content">
+            <slot name="user-name"></slot>
+            <div class="meta">
+              <span class="date">Joined in 2013</span>
+            </div>
+            <div class="description">
+              Kristy is an art director living in New York.
+            </div>
+          </div>
+          <div class="extra content">
+            <a>
+              <i class="user icon"></i>
+              22 Friends
+            </a>
+          </div>
+        </div>
+    </script>
+
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="app.js"></script>
+    <style>
+      .contenair {
+        padding: 40px;
+      }
+      .user-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+    </style>
+  </body>
+</html>

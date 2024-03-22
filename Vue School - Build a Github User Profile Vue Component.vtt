@@ -1,0 +1,416 @@
+WEBVTT
+
+00:00:04.224 --> 00:00:08.275
+By now we have covered
+all the bits you need to know,
+
+00:00:08.445 --> 00:00:12.504
+in order to get started using
+components in your applications.
+
+00:00:13.639 --> 00:00:16.855
+Before you do that though,
+it's best to do some practice,
+
+00:00:17.048 --> 00:00:19.557
+so that you commit
+what you've learned to memory,
+
+00:00:19.733 --> 00:00:23.383
+since the best way to learn code
+is by writing code.
+
+00:00:24.301 --> 00:00:28.447
+When you are working on a website
+you usually have a template,
+
+00:00:28.639 --> 00:00:34.643
+or you use a CSS framework
+like Boostrap, Bulma or Semantic UI.
+
+00:00:35.193 --> 00:00:38.727
+Breaking the template
+or common elements into components,
+
+00:00:38.903 --> 00:00:41.085
+is one of the most common use cases.
+
+00:00:42.192 --> 00:00:46.415
+Just for the exercises
+I will be using Semantic UI,
+
+00:00:46.639 --> 00:00:49.107
+that comes with a ton of UI elements.
+
+00:00:49.383 --> 00:00:52.369
+If you prefer to use
+another CSS framework,
+
+00:00:52.577 --> 00:00:55.233
+that you are more familiar with,
+then do that.
+
+00:00:56.048 --> 00:00:59.422
+One drawback of Semantic
+is that it requires jQuery,
+
+00:00:59.580 --> 00:01:01.187
+in its JavaScript library.
+
+00:01:01.464 --> 00:01:06.145
+Though, we will just use their CSS,
+so we don't need anything extra.
+
+00:01:07.303 --> 00:01:10.963
+The element that we will use
+in this exercise, is the card.
+
+00:01:12.532 --> 00:01:15.125
+The goal is to create a component,
+
+00:01:15.320 --> 00:01:19.551
+that displays
+a person's GitHub profile, like so.
+
+00:01:20.188 --> 00:01:24.243
+This will be the user's avatar,
+this their name,
+
+00:01:24.755 --> 00:01:28.272
+here we can use the date
+that the user registered,
+
+00:01:30.319 --> 00:01:31.565
+here the bio,
+
+00:01:32.744 --> 00:01:36.519
+and lastly, we can display
+the number of followers the user has.
+
+00:01:38.225 --> 00:01:42.621
+We can also fix the links
+to send to the user's profile page,
+
+00:01:42.815 --> 00:01:44.353
+and followers page.
+
+00:01:44.948 --> 00:01:46.857
+You can copy the markup,
+
+00:01:47.037 --> 00:01:49.639
+if you click
+this little icon over here.
+
+00:01:53.025 --> 00:01:56.929
+Don't forget to include
+Semantic UI in your page.
+
+00:01:57.661 --> 00:02:01.345
+I recommend you grab
+their full CSS file from a CDN.
+
+00:02:02.628 --> 00:02:05.879
+The goal of this exercise
+is to create a component,
+
+00:02:06.068 --> 00:02:07.931
+like github-user-card,
+
+00:02:08.109 --> 00:02:11.267
+that accepts the username
+of the user to display.
+
+00:02:12.584 --> 00:02:13.984
+Something like this.
+
+00:02:16.302 --> 00:02:18.640
+Now, as you're probably thinking,
+
+00:02:18.848 --> 00:02:23.539
+the component needs to make
+an AJAX call to Github's API,
+
+00:02:23.719 --> 00:02:26.442
+in order to retrieve the user details.
+
+00:02:26.902 --> 00:02:29.346
+You can do that
+using the fetch method,
+
+00:02:29.538 --> 00:02:33.223
+or the axios library
+in a component's lifecycle hook.
+
+00:02:34.487 --> 00:02:37.532
+The url to get a user from Github,
+
+00:02:37.707 --> 00:02:44.776
+is api.github.com/users
+/ whatever the username is.
+
+00:02:46.580 --> 00:02:49.315
+I have included
+some boilerplate code here
+
+00:02:49.508 --> 00:02:50.785
+to help you get started,
+
+00:02:50.986 --> 00:02:53.296
+where I've included Vue.js,
+
+00:02:54.021 --> 00:02:55.463
+axios,
+
+00:02:55.876 --> 00:02:58.969
+and Semantic UIs CSS.
+
+00:03:01.354 --> 00:03:04.338
+You will find the link
+in the description of the video.
+
+00:03:05.230 --> 00:03:08.373
+Ok, it's time for you
+to pause the video,
+
+00:03:08.546 --> 00:03:09.999
+do the exercise,
+
+00:03:10.212 --> 00:03:13.209
+and come back to see
+the solution when you are ready.
+
+00:03:13.565 --> 00:03:14.904
+If you struggle solving this,
+
+00:03:15.082 --> 00:03:17.516
+don't worry,
+and don't give up easily.
+
+00:03:17.854 --> 00:03:19.246
+It might take a while,
+
+00:03:19.430 --> 00:03:22.144
+if this is your first time
+that you've written a component,
+
+00:03:22.352 --> 00:03:24.943
+or if you are just starting out
+with Vue.
+
+00:03:25.268 --> 00:03:26.619
+If that's the case,
+
+00:03:26.809 --> 00:03:30.144
+I advise you to try
+as hard as possible to solve this,
+
+00:03:30.337 --> 00:03:34.247
+and the next exercise by yourself,
+before looking at the solutions,
+
+00:03:34.408 --> 00:03:36.927
+so you can truly
+understand the concepts.
+
+00:03:37.472 --> 00:03:38.973
+If you have any questions,
+
+00:03:39.181 --> 00:03:43.642
+you can leave a comment or chat
+about it in our Slack workspace.
+
+00:03:44.143 --> 00:03:47.283
+Ok, go on. I'm waiting.
+
+00:03:50.075 --> 00:03:51.559
+Welcome back!
+
+00:03:51.844 --> 00:03:56.553
+Let's see how we can implement
+the GitHub user card component.
+
+00:03:57.018 --> 00:04:00.365
+I like to begin
+with the JavaScript of my components,
+
+00:04:00.537 --> 00:04:02.790
+and make sure I have all I need,
+
+00:04:02.973 --> 00:04:05.215
+before I tackle
+the component's template.
+
+00:04:05.774 --> 00:04:09.219
+To get started,
+I will register the component,
+
+00:04:13.474 --> 00:04:16.942
+and give it a prop, that is username,
+
+00:04:17.155 --> 00:04:20.459
+that we need in order to know
+which user to look for.
+
+00:04:22.028 --> 00:04:24.855
+The username should be type of string,
+
+00:04:28.643 --> 00:04:30.611
+and it will be required.
+
+00:04:33.643 --> 00:04:39.785
+The functionality of this component
+is to make a call to GitHub's API,
+
+00:04:39.991 --> 00:04:43.988
+to get the user's details
+in order to display them.
+
+00:04:44.388 --> 00:04:50.506
+So, let's add a data property
+to store the user object in.
+
+00:04:58.140 --> 00:05:00.714
+Now, it's time for the fun part.
+
+00:05:01.188 --> 00:05:05.362
+We will do the AJAX call
+once the component is created,
+
+00:05:05.552 --> 00:05:08.190
+and before it's mounted
+to the document.
+
+00:05:08.601 --> 00:05:11.590
+For this stage,
+we will use the created hook.
+
+00:05:15.151 --> 00:05:19.592
+In here,
+we will use the axios.get method,
+
+00:05:19.770 --> 00:05:21.790
+to make an AJAX request.
+
+00:05:26.418 --> 00:05:29.904
+This will allow us
+to grab the user from Github
+
+00:05:30.108 --> 00:05:32.010
+using the passed username.
+
+00:05:32.496 --> 00:05:36.871
+Then, I will change
+the createdLifecycleHook to async
+
+00:05:37.057 --> 00:05:40.229
+so that we can await the response
+from Github.
+
+00:05:45.585 --> 00:05:50.187
+Finally, I will set the response data
+to our user data property.
+
+00:05:55.314 --> 00:05:56.480
+Looks good!
+
+00:05:57.055 --> 00:06:00.403
+Since we already use
+the component in the HTML,
+
+00:06:02.249 --> 00:06:06.361
+if we open the devtools we can inspect
+the component's instance,
+
+00:06:06.557 --> 00:06:09.452
+and confirm
+that the user object is here.
+
+00:06:13.821 --> 00:06:18.041
+Great, we can also take a look
+at its properties
+
+00:06:18.234 --> 00:06:20.534
+that we will use
+in the component's template.
+
+00:06:21.109 --> 00:06:24.004
+Okay, let's fix the template now.
+
+00:06:30.847 --> 00:06:32.595
+I will create a template,
+
+00:06:32.767 --> 00:06:35.865
+and use it's id
+to assign it to our component.
+
+00:06:42.785 --> 00:06:47.046
+Let's move the HTML for the card
+inside here.
+
+00:06:52.170 --> 00:06:55.786
+And then I'll just move the template
+down with the other scripts.
+
+00:07:01.484 --> 00:07:05.433
+Lastly, I'll register the template
+on the component,
+
+00:07:11.046 --> 00:07:15.273
+Inside of the template,
+we have access to the user object,
+
+00:07:15.426 --> 00:07:18.272
+so I will replace
+the hardcoded values,
+
+00:07:18.481 --> 00:07:20.560
+with what we get from the API.
+
+00:07:20.709 --> 00:07:23.891
+If you want to see the available data,
+
+00:07:24.088 --> 00:07:28.873
+you can either check the devtools
+or open the Github API in the browser.
+
+00:07:53.401 --> 00:07:56.895
+For the links, we can add them
+directly in the template,
+
+00:07:57.074 --> 00:07:59.332
+or create computed properties.
+
+00:07:59.610 --> 00:08:01.580
+I will just put them in the template.
+
+00:08:42.963 --> 00:08:46.841
+Great! Our component is ready.
+Let's check it out.
+
+00:08:53.622 --> 00:08:56.577
+Oops, we need the # selector here.
+
+00:08:58.293 --> 00:09:00.200
+Great, it works.
+
+00:09:00.665 --> 00:09:04.331
+Now, we can create
+as many Github cards as we want.
+
+00:09:13.525 --> 00:09:16.632
+If we want to create
+many Github cards,
+
+00:09:16.810 --> 00:09:19.310
+we can create an array in our data.
+
+00:09:27.543 --> 00:09:33.029
+And then we will use v-for
+to loop over each item in the array
+
+00:09:33.217 --> 00:09:35.240
+creating a card for each.
+
+00:09:51.773 --> 00:09:55.135
+Cool, now we have
+all these people here.
